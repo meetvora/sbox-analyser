@@ -1,7 +1,7 @@
 S-Box Analyser
 =============
 *S-Box Analyser*
-is a toolkit to analyse and study the properties of **any** given substitution box.
+is a toolkit to analyse and study the properties of **any** given substitution boxes.
 
 Consider **Data Encryption Standard**. DES had been secure for over 20 years until Matsui developed a [technique](https://www.wikiwand.com/en/Linear_cryptanalysis) to break the cipher. The S-boxes of DES, however, haven't been released officially yet. Hence, a tool is needed to sudy and analyse substitution boxes. 
 
@@ -20,7 +20,7 @@ Using the look-up table of an S-Box, S-Box Analyser gets the following propertie
   - properties.py : A place where all properties are being calculated. 
   - tables : Where one stores the look-up tables.
   - results: The analysis reports for every substitution box.
-  - README.md : File that explains this stuff.
+  - readme.md : File that explains this stuff.
 ---
 #### Setting up the thing
 1. Place the S-Box look-up tables in *tables* named as sbox_*[number]*.txt as already done for DES.
@@ -45,7 +45,7 @@ look_up = look_up.split()
 
 rows = [ look_up[17:33], look_up[34:50], look_up[51:67], look_up[68:84] ] #Should be changed according to format of txt.
 
-fn_map = function_generate(rows)
+fn_map = properties.function_generate(rows)
 
 for i in xrange(OUT):
     print 'X' + str(i) + '\n:'
@@ -53,10 +53,11 @@ for i in xrange(OUT):
 ```
 ##### Version: 1.0
 Coming up next: 
-1. Correlation Immunity Order
-2. Resiliency Order
-3. Algebraic Immunity Order
-4. LSFR Analyser
+
+* Correlation Immunity Order
+* Resiliency Order
+* Algebraic Immunity Order
+* LSFR Analyser
 
 
 #### Contribution
