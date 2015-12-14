@@ -21,6 +21,7 @@ Using the look-up table of an S-Box, S-Box Analyser gets the following propertie
   - tables : Where one stores the look-up tables.
   - results: The analysis reports for every substitution box.
   - readme.md : File that explains this stuff.
+
 ---
 #### Setting up the thing
 1. Place the S-Box look-up tables in *tables* named as sbox_*[number]*.txt as already done for DES.
@@ -28,9 +29,9 @@ Using the look-up table of an S-Box, S-Box Analyser gets the following propertie
 3. The required results will be stored in *results* as sbox_*[number]*.txt
 
 **Note**: 
-1. The files in *tables* might have different structure. Make sure to change line 132 of *properties.py* accordingly.
-2. The digits in each term denote the subscript of variable. Presence of '0' denotes 1 in the boolean function. Thus, Y<sub>i</sub> is denoted by i.
-3. The txt files already included here are for the DES S-Boxes. Make sure to delete the previous files before analysing new S-Boxes.
+* The files in *tables* might have different structure. Make sure to change line 132 of *properties.py* accordingly.
+* The digits in each term denote the subscript of variable. Presence of '0' denotes 1 in the boolean function. Thus, Y<sub>i</sub> is denoted by i.
+* The txt files already included here are for the DES S-Boxes. Make sure to delete the previous files before analysing new S-Boxes.
 
 #### Using the Code
 Using the script is pretty simple. 
