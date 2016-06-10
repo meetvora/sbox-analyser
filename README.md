@@ -3,7 +3,7 @@ S-Box Analyser
 *S-Box Analyser*
 is a toolkit to analyse and study the properties of **any** given substitution boxes.
 
-Consider **Data Encryption Standard**. DES had been secure for over 20 years until Matsui developed a [technique](https://www.wikiwand.com/en/Linear_cryptanalysis) to break the cipher. The S-boxes of DES, however, haven't been released officially yet. Hence, a tool is needed to sudy and analyse substitution boxes. 
+Consider **Data Encryption Standard**, which was secure for around 18 years until [linear cryptanalysis](https://www.wikiwand.com/en/Linear_cryptanalysis) was developed  to break the cipher. The S-boxes of DES, however, haven't been released officially yet. Hence, a tool is needed to sudy and analyse substitution boxes. 
 
 Using the look-up table of an S-Box, S-Box Analyser gets the following properties for every ***out***-bit boolean function:
 
@@ -15,12 +15,16 @@ Using the look-up table of an S-Box, S-Box Analyser gets the following propertie
 - Degree
 - Terms present in the boolean function
 
+In the recent years, lightweight ciphers like PRESENT have emerged as trend, which focus on easy hardware implementation, beside the security aspects. A new technique to develop secure S-boxes is using Qausi-groups.
+
+The update includes the crypt-analysis of Quasi-groups and results to verify the security of Q-S-boxes.
+
 #### Table of Contents
   - main.py : Gateway to the toolkit.
+  - qsbox_main.py: Q-S-box analyser.
   - properties.py : A place where all properties are being calculated. 
   - tables : Where one stores the look-up tables.
   - results: The analysis reports for every substitution box.
-  - readme.md : File that explains this stuff.
 
 ---
 #### Setting up the thing
@@ -52,14 +56,11 @@ for i in xrange(OUT):
     print 'X' + str(i) + '\n:'
     print fn_map[i]
 ```
-##### Version: 1.0
-Coming up next: 
+##### Version: 1.1
+To-DO:
 
-* Correlation Immunity Order
-* Resiliency Order
-* Algebraic Immunity Order
-* LSFR Analyser
-
+* LFSR Analyser
+* Q-S-box Generator
 
 #### Contribution
 Feel free to report errors and submit pull requests. Contributions are welcome.
